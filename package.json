@@ -10,6 +10,10 @@
     "Other"
   ],
   "activationEvents": [],
+  "repository": {
+    "type": "git",
+    "url": "https://https://github.com/MichaelAtsma/toggle-wrap.git"
+  },
   "main": "./extension.js",
   "contributes": {
     "commands": [
