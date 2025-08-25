@@ -3,6 +3,7 @@ const vscode = require('vscode');
 // Define your wrappers here
 const wrappers = {
     "code": { open: "<code>", close: "</code>" },
+    "pre": { open: "<pre>", close: "</pre>" },
     "b": { open: "<b>", close: "</b>" },
     "i": { open: "<i>", close: "</i>" },
     "u": { open: "<u>", close: "</u>" }

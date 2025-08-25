@@ -1,8 +1,9 @@
 {
+  "publisher": "Michael Atsma",
   "name": "toggle-wrap",
   "displayName": "toggle-wrap",
   "description": "Toggle wrapping the selected text with predefined or custom prefixes/suffixes",
-  "version": "0.0.1",
+  "version": "1.0.1",
   "engines": {
     "vscode": "^1.103.0"
   },
