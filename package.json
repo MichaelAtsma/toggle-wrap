@@ -1,0 +1,43 @@
+{
+  "name": "toggle-wrap",
+  "displayName": "toggle-wrap",
+  "description": "Toggle wrapping the selected text with predefined or custom prefixes/suffixes",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.103.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [],
+  "main": "./extension.js",
+  "contributes": {
+  "commands": [
+    { "command": "toggle-wrap.code", "title": "Toggle <code>" },
+    { "command": "toggle-wrap.pre", "title": "Toggle <pre>" },
+    { "command": "toggle-wrap.b", "title": "Toggle <b>" },
+    { "command": "toggle-wrap.i", "title": "Toggle <i>" },
+    { "command": "toggle-wrap.u", "title": "Toggle <u>" }
+  ],
+  "keybindings": [
+    { "command": "toggle-wrap.code", "key": "ctrl+alt+c", "when": "editorHasSelection" },
+    { "command": "toggle-wrap.pre", "key": "ctrl+alt+p", "when": "editorHasSelection" },
+    { "command": "toggle-wrap.b", "key": "ctrl+alt+b", "when": "editorHasSelection" },
+    { "command": "toggle-wrap.i", "key": "ctrl+alt+i", "when": "editorHasSelection" },
+    { "command": "toggle-wrap.u", "key": "ctrl+alt+u", "when": "editorHasSelection" }
+  ]
+},
+  "scripts": {
+    "lint": "eslint .",
+    "pretest": "npm run lint",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.103.0",
+    "@types/mocha": "^10.0.10",
+    "@types/node": "22.x",
+    "eslint": "^9.32.0",
+    "@vscode/test-cli": "^0.0.11",
+    "@vscode/test-electron": "^2.5.2"
+  }
+}
