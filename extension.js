@@ -6,7 +6,8 @@ const wrappers = {
     "pre": { open: "<pre>", close: "</pre>" },
     "b": { open: "<b>", close: "</b>" },
     "i": { open: "<i>", close: "</i>" },
-    "u": { open: "<u>", close: "</u>" }
+    "u": { open: "<u>", close: "</u>" },
+    "quote": { open: "\"", close: "\"" }
 };
 
 function activate(context) {

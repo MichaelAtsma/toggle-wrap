@@ -3,7 +3,7 @@
   "name": "toggle-wrap",
   "displayName": "toggle-wrap",
   "description": "Toggle wrapping the selected text with predefined or custom prefixes/suffixes",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "engines": {
     "vscode": "^1.103.0"
   },
@@ -29,7 +29,8 @@
       { "command": "toggle-wrap.pre", "key": "ctrl+alt+p" },
       { "command": "toggle-wrap.b", "key": "ctrl+alt+b" },
       { "command": "toggle-wrap.i", "key": "ctrl+alt+i" },
-      { "command": "toggle-wrap.u", "key": "ctrl+alt+u" }
+      { "command": "toggle-wrap.u", "key": "ctrl+alt+u" },
+      { "command": "toggle-wrap.quote", "key": "ctrl+alt+q" }
     ]
   },
   "scripts": {

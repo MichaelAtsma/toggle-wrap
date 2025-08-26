@@ -4,14 +4,15 @@ Toggle-Wrap is a simple VS Code extension that lets you quickly wrap or unwrap s
 
 ## Features
 
-- Toggle wrapping of selected text with `<code>`, `<b>`, `<i>`, `<u>`, or `<pre>` tags.
+- Toggle wrapping of selected text with various tags, like `<code>`, `<pre>`, `<b>`, etc.
 - Unwraps the tags if the selection is already wrapped.
 - Keyboard shortcuts for each tag:
 	- `Ctrl+Alt+C` — Toggle `<code>`
+	- `Ctrl+Alt+P` — Toggle `<pre>`
 	- `Ctrl+Alt+B` — Toggle `<b>`
 	- `Ctrl+Alt+I` — Toggle `<i>`
 	- `Ctrl+Alt+U` — Toggle `<u>`
-	- `Ctrl+Alt+P` — Toggle `<pre>`
+	- `Ctrl+Alt+Q` — Toggle `"`
 - Works with multiple selections.
 - Accessible via the Command Palette (search for "Toggle <tag>").
 
@@ -46,5 +47,9 @@ Initial release of toggle-wrap
 ### 1.1.0
 
 Added functionality when no selection is made
+
+### 1.1.0
+
+Added quotation marks with `Ctrl+Alt+Q`
 
 **Enjoy!**
