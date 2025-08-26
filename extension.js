@@ -17,21 +17,29 @@ function activate(context) {
 
             const { document, selections } = editor;
 
-            editor.edit(editBuilder => {
-                for (const sel of selections) {
-                    let text = document.getText(sel);
+            // Check if all selections are empty (no text selected)
+            const allEmpty = selections.every(sel => sel.isEmpty);
+            if (allEmpty) {
+                // Use snippet to insert wrappers and place cursor between them, tab to jump after
+                const snippet = new vscode.SnippetString(`${wrapper.open}$1${wrapper.close}$0`);
+                editor.insertSnippet(snippet, selections);
+            } else {
+                editor.edit(editBuilder => {
+                    for (const sel of selections) {
+                        let text = document.getText(sel);
 
-                    if (text.startsWith(wrapper.open) && text.endsWith(wrapper.close)) {
-                        // unwrap
-                        text = text.slice(wrapper.open.length, -wrapper.close.length);
-                    } else {
-                        // wrap
-                        text = `${wrapper.open}${text}${wrapper.close}`;
+                        if (text.startsWith(wrapper.open) && text.endsWith(wrapper.close)) {
+                            // unwrap
+                            text = text.slice(wrapper.open.length, -wrapper.close.length);
+                        } else {
+                            // wrap
+                            text = `${wrapper.open}${text}${wrapper.close}`;
+                        }
+
+                        editBuilder.replace(sel, text);
                     }
-
-                    editBuilder.replace(sel, text);
-                }
-            });
+                });
+            }
         });
 
         context.subscriptions.push(disposable);

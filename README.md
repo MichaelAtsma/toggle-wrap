@@ -43,4 +43,8 @@ No known issues yet.
 
 Initial release of toggle-wrap
 
+### 1.1.0
+
+Added functionality when no selection is made
+
 **Enjoy!**
